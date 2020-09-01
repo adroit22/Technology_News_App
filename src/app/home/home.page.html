@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Latest Technology News
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-content>
+    <ion-list>
+      <ion-item detail *ngFor="let article of articles" (click)="goToDetails(article)" routerDirection='forward'>
+        {{ article.title }}
+        <ion-avatar slot="start">
+          <img [src]="article.urlToImage">
+        </ion-avatar>
+      </ion-item>
+    </ion-list>
+  </ion-content>
